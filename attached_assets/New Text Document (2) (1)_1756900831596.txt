@@ -1,0 +1,1410 @@
+  "name": "web-app",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "node tools/generate-llms.js || true && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@radix-ui/react-alert-dialog": "^1.0.5",
+    "@radix-ui/react-avatar": "^1.0.3",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.5",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-slider": "^1.1.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.4",
+    "lucide-react": "^0.292.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.27.0",
+    "@babel/parser": "^7.27.0",
+    "@babel/traverse": "^7.27.0",
+    "@babel/types": "^7.27.0",
+    "@types/node": "^20.8.3",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5",
+    "terser": "^5.39.0",
+    "eslint": "^8.57.1",
+    "eslint-config-react-app": "^7.0.1"
+  }
+}
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="generator" content="Hostinger Horizons" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hostinger Horizons</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+{
+  "name": "web-app",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "node tools/generate-llms.js || true && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@radix-ui/react-alert-dialog": "^1.0.5",
+    "@radix-ui/react-avatar": "^1.0.3",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.5",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-slider": "^1.1.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.4",
+    "lucide-react": "^0.292.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.27.0",
+    "@babel/parser": "^7.27.0",
+    "@babel/traverse": "^7.27.0",
+    "@babel/types": "^7.27.0",
+    "@types/node": "^20.8.3",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5",
+    "terser": "^5.39.0",
+    "eslint": "^8.57.1",
+    "eslint-config-react-app": "^7.0.1"
+  }
+}
+
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Toaster } from '@/components/ui/toaster';
+import Header from '@/components/layout/Header';
+import HeroSection from '@/components/sections/HeroSection';
+import ServicesSection from '@/components/sections/ServicesSection';
+import AboutSection from '@/components/sections/AboutSection';
+import ContactSection from '@/components/sections/ContactSection';
+import Footer from '@/components/layout/Footer';
+
+function App() {
+  return (
+    <>
+      <Helmet>
+        <title>ENLITE EV CARE - Purely Electric Vehicle Services (2, 3 & Bus Segments) in Hyderabad</title>
+        <meta name="description" content="ENLITE EV CARE provides specialized maintenance, diagnostics, and repair services for purely electric 2-wheelers, 3-wheelers, and electric buses in Hyderabad. Contact us at +91 9666994443; 99080 99964 or email info@enliteev.com. Visit LIG 549, Road No-3, KPHB Colony, Hyderabad-500072, Telangana." />
+        <meta property="og:title" content="ENLITE EV CARE - Purely Electric Vehicle Services (2, 3 & Bus Segments) in Hyderabad" />
+        <meta property="og:description" content="ENLITE EV CARE provides specialized maintenance, diagnostics, and repair services for purely electric 2-wheelers, 3-wheelers, and electric buses in Hyderabad. Contact us at +91 9666994443; 99080 99964 or email info@enliteev.com. Visit LIG 549, Road No-3, KPHB Colony, Hyderabad-500072, Telangana." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+        <Header />
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <ContactSection />
+        <Footer />
+        <Toaster />
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Toaster } from '@/components/ui/toaster';
+import Header from '@/components/layout/Header';
+import HeroSection from '@/components/sections/HeroSection';
+import ServicesSection from '@/components/sections/ServicesSection';
+import AboutSection from '@/components/sections/AboutSection';
+import ContactSection from '@/components/sections/ContactSection';
+import Footer from '@/components/layout/Footer';
+
+function App() {
+  return (
+    <>
+      <Helmet>
+        <title>ENLITE EV CARE - Purely Electric Vehicle Services (2, 3 & Bus Segments) in Hyderabad</title>
+        <meta name="description" content="ENLITE EV CARE provides specialized maintenance, diagnostics, and repair services for purely electric 2-wheelers, 3-wheelers, and electric buses in Hyderabad. Contact us at +91 9666994443; 99080 99964 or email info@enliteev.com. Visit LIG 549, Road No-3, KPHB Colony, Hyderabad-500072, Telangana." />
+        <meta property="og:title" content="ENLITE EV CARE - Purely Electric Vehicle Services (2, 3 & Bus Segments) in Hyderabad" />
+        <meta property="og:description" content="ENLITE EV CARE provides specialized maintenance, diagnostics, and repair services for purely electric 2-wheelers, 3-wheelers, and electric buses in Hyderabad. Contact us at +91 9666994443; 99080 99964 or email info@enliteev.com. Visit LIG 549, Road No-3, KPHB Colony, Hyderabad-500072, Telangana." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+        <Header />
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <ContactSection />
+        <Footer />
+        <Toaster />
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+import { toast } from '@/components/ui/use-toast';
+
+export const handleContactClick = () => {
+  toast({
+    title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀",
+    duration: 5000,
+  });
+};
+
+export const handleAppointmentClick = () => {
+  toast({
+    title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀",
+    duration: 5000,
+  });
+};
+
+export const handleServiceClick = () => {
+  toast({
+    title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀",
+    duration: 5000,
+  });
+};
+import React from 'react';
+import { Plug } from 'lucide-react';
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-900 text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center">
+                <Plug className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-2xl font-bold">ENLITE EV CARE</span>
+            </div>
+            <p className="text-gray-400">
+              Your trusted partner for expert electric vehicle services across 2, 3, and bus segments.
+            </p>
+          </div>
+
+          <div>
+            <span className="text-lg font-semibold mb-4 block">Quick Links</span>
+            <div className="space-y-2">
+              <a href="#home" className="text-gray-400 hover:text-white transition-colors block">Home</a>
+              <a href="#services" className="text-gray-400 hover:text-white transition-colors block">Services</a>
+              <a href="#about" className="text-gray-400 hover:text-white transition-colors block">About</a>
+              <a href="#contact" className="text-gray-400 hover:text-white transition-colors block">Contact</a>
+            </div>
+          </div>
+
+          <div>
+            <span className="text-lg font-semibold mb-4 block">Services</span>
+            <div className="space-y-2">
+              <span className="text-gray-400 block">2-Wheeler EV Service</span>
+              <span className="text-gray-400 block">3-Wheeler EV Service</span>
+              <span className="text-gray-400 block">Electric Bus Maintenance</span>
+              <span className="text-gray-400 block">Battery Management</span>
+            </div>
+          </div>
+
+          <div>
+            <span className="text-lg font-semibold mb-4 block">Contact Info</span>
+            <div className="space-y-2">
+              <span className="text-gray-400 block">99080 99964</span>
+              <span className="text-gray-400 block">info@enliteev.com</span>
+              <span className="text-gray-400 block">LIG 549, Road No-3</span>
+              <span className="text-gray-400 block">KPHB Colony Hyderabad-500072, Telangana</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p className="text-gray-400">
+            © 2024 ENLITE EV CARE. All rights reserved. | Privacy Policy | Terms of Service
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Plug, Car, Bus } from 'lucide-react';
+import { handleAppointmentClick } from '@/components/common/ToastHandlers';
+const Header = () => {
+  return <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-green-100 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <motion.div initial={{
+          opacity: 0,
+          x: -20
+        }} animate={{
+          opacity: 1,
+          x: 0
+        }} className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center">
+              <Plug className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+              ENLITE EV CARE
+            </span>
+          </motion.div>
+          
+          <motion.div initial={{
+          opacity: 0,
+          x: 20
+        }} animate={{
+          opacity: 1,
+          x: 0
+        }} className="hidden md:flex items-center space-x-8">
+            <a href="#home" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Home</a>
+            <a href="#services" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Services</a>
+            <a href="#about" className="text-gray-700 hover:text-green-600 transition-colors font-medium">About</a>
+            <a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Contact: +91 9666994443; 99080 99964</a>
+            <Button onClick={handleAppointmentClick} className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
+              Book Service
+            </Button>
+          </motion.div>
+        </div>
+      </div>
+    </nav>;
+};
+export default Header;
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+
+const AboutSection = () => {
+  return (
+    <section id="about" className="py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <div className="space-y-4">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+                Leading the Charge in
+                <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent block">
+                  EV Service Innovation
+                </span>
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                ENLITE EV CARE is at the forefront of electric vehicle maintenance, 
+                providing expert care with a focus on efficiency, reliability, and sustainable solutions.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                "Certified EV technicians and specialists",
+                "Advanced diagnostic tools for all EV segments",
+                "Tailored service plans for optimal vehicle lifespan",
+                "Dedicated support for commercial and private fleets",
+                "Eco-conscious practices and component recycling"
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-center space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700 text-lg">{feature}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-2 gap-8 pt-8">
+              <div className="text-center p-6 bg-green-50 rounded-xl">
+                <div className="text-3xl font-bold text-green-600 mb-2">99%</div>
+                <div className="text-gray-700">Service Reliability</div>
+              </div>
+              <div className="text-center p-6 bg-blue-50 rounded-xl">
+                <div className="text-3xl font-bold text-blue-600 mb-2">Fast</div>
+                <div className="text-gray-700">Turnaround Time</div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <img  
+              className="w-full h-[500px] object-cover rounded-2xl shadow-2xl" 
+              alt="Electric vehicle mechanics working on an EV battery pack"
+             src="https://images.unsplash.com/photo-1621949176465-ee50f684c3ee?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4 }}
+              className="absolute -top-6 -right-6 bg-white p-6 rounded-xl shadow-xl border border-gray-100"
+            >
+              <div className="text-center">
+                <div className="text-2xl font-bold text-gray-900">Future-Ready</div>
+                <div className="text-gray-600">Sustainable Transport</div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { handleContactClick } from '@/components/common/ToastHandlers';
+
+const ContactSection = () => {
+  return (
+    <section id="contact" className="py-20 bg-gradient-to-r from-gray-50 to-green-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Get Your EV Serviced Today
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ready to give your electric vehicle the care it deserves? 
+            Contact us to schedule your service or inquire about our solutions.
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-8"
+          >
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Phone</div>
+                    <div className="text-gray-600">99080 99964</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Email</div>
+                    <div className="text-gray-600">info@enliteev.com</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Address</div>
+                    <div className="text-gray-600">LIG 549, Road No-3, KPHB Colony Hyderabad-500072, Telangana</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
+                    <Clock className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Hours</div>
+                    <div className="text-gray-600">Mon-Fri: 9AM-7PM, Sat: 10AM-5PM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Urgent Assistance</h3>
+              <p className="mb-6">
+                For immediate EV roadside assistance or critical repairs, please call our 24/7 hotline. 
+                We're here to get you back on the road safely.
+              </p>
+              <Button 
+                onClick={handleContactClick}
+                variant="outline" 
+                className="bg-white text-green-600 border-white hover:bg-gray-100"
+              >
+                Emergency Support
+              </Button>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-2xl p-8 shadow-lg"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+            
+            <form className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                  <input 
+                    type="text" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    placeholder="John"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                  <input 
+                    type="text" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    placeholder="Doe"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                <input 
+                  type="email" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  placeholder="john.doe@example.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                <input 
+                  type="tel" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  placeholder="(555) 123-4567"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <textarea 
+                  rows={4}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  placeholder="How can we help you today?"
+                ></textarea>
+              </div>
+
+              <Button 
+                onClick={handleContactClick}
+                type="button"
+                className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 py-3"
+              >
+                Send Message
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </form>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Award, ArrowRight } from 'lucide-react';
+import { handleAppointmentClick, handleServiceClick } from '@/components/common/ToastHandlers';
+
+const HeroSection = () => {
+  return (
+    <section id="home" className="pt-16 min-h-screen flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <div className="space-y-4">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center px-4 py-2 bg-green-100 rounded-full text-green-700 font-medium"
+              >
+                <Award className="w-4 h-4 mr-2" />
+                Trusted EV Service Partner
+              </motion.div>
+              
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Powering Your
+                <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent block">
+                  Electric Journey
+                </span>
+              </h1>
+              
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Specialized services for purely electric 2, 3-wheelers, and buses. 
+                Experience reliable maintenance, diagnostics, and repairs for optimal EV performance.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                onClick={handleAppointmentClick}
+                size="lg" 
+                className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-lg px-8 py-6"
+              >
+                Schedule Service
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button 
+                onClick={handleServiceClick}
+                variant="outline" 
+                size="lg" 
+                className="border-2 border-green-600 text-green-600 hover:bg-green-50 text-lg px-8 py-6"
+              >
+                Our Solutions
+              </Button>
+            </div>
+
+            <div className="grid grid-cols-3 gap-8 pt-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600">5+</div>
+                <div className="text-gray-600">Years EV Expertise</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">1000+</div>
+                <div className="text-gray-600">Vehicles Serviced</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600">24/7</div>
+                <div className="text-gray-600">Support Available</div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="relative z-10">
+              <img  
+                className="w-full h-[600px] object-cover rounded-2xl shadow-2xl" 
+                alt="Electric vehicle charging station with various EV types"
+               src="https://horizons-cdn.hostinger.com/077e65ce-7214-43f2-8bf8-0ed4bedb8717/5b5ca986a7d64b0a12fcaba514094ab2.jpg" />
+            </div>
+            
+            <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-green-200 to-blue-200 rounded-2xl -z-10"></div>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.6 }}
+              className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-gray-100"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+                  <ArrowRight className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <div className="font-bold text-gray-900">Efficient & Eco-Friendly</div>
+                  <div className="text-gray-600">Sustainable Solutions</div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { BatteryCharging, Bike as Moped, Bus, Car, Wrench, Sprout, ArrowRight } from 'lucide-react';
+import { handleServiceClick } from '@/components/common/ToastHandlers';
+
+const ServicesSection = () => {
+  return (
+    <section id="services" className="py-20 bg-gradient-to-r from-green-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Specialized EV Services for Every Segment
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We provide comprehensive care for your electric vehicles, ensuring peak performance and longevity.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              icon: Moped,
+              title: "2-Wheeler EV Service",
+              description: "Expert diagnostics and maintenance for electric scooters and motorcycles, including battery health checks.",
+              color: "from-green-500 to-green-600"
+            },
+            {
+              icon: Car,
+              title: "3-Wheeler EV Service",
+              description: "Specialized repair and support for electric rickshaws and other 3-wheeled commercial EVs.",
+              color: "from-blue-500 to-blue-600"
+            },
+            {
+              icon: Bus,
+              title: "Electric Bus Maintenance",
+              description: "Comprehensive fleet maintenance and rapid repair solutions for electric buses, minimizing downtime.",
+              color: "from-purple-500 to-indigo-600"
+            },
+            {
+              icon: BatteryCharging,
+              title: "Battery Management",
+              description: "Advanced battery testing, reconditioning, and replacement services to extend battery life and efficiency.",
+              color: "from-orange-500 to-red-600"
+            },
+            {
+              icon: Wrench,
+              title: "Motor & Controller Repair",
+              description: "Diagnosis and repair of electric motors and controllers, ensuring optimal power delivery.",
+              color: "from-cyan-500 to-teal-600"
+            },
+            {
+              icon: Sprout,
+              title: "Eco-Friendly Disposal",
+              description: "Responsible and environmentally sound disposal services for end-of-life EV components and batteries.",
+              color: "from-lime-500 to-green-700"
+            }
+          ].map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+            >
+              <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6`}>
+                <service.icon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+              <Button 
+                onClick={handleServiceClick}
+                variant="outline" 
+                className="w-full border-gray-200 hover:bg-gray-50"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;
+import { cn } from '@/lib/utils';
+import { Slot } from '@radix-ui/react-slot';
+import { cva } from 'class-variance-authority';
+import React from 'react';
+
+const buttonVariants = cva(
+  'inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  {
+    variants: {
+      variant: {
+        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        destructive:
+          'bg-destructive text-destructive-foreground hover:bg-destructive/90',
+        outline:
+          'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+        secondary:
+          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+        ghost: 'hover:bg-accent hover:text-accent-foreground',
+        link: 'text-primary underline-offset-4 hover:underline',
+      },
+      size: {
+        default: 'h-10 px-4 py-2',
+        sm: 'h-9 rounded-md px-3',
+        lg: 'h-11 rounded-md px-8',
+        icon: 'h-10 w-10',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
+    },
+  },
+);
+
+const Button = React.forwardRef(({ className, variant, size, asChild = false, ...props }, ref) => {
+  const Comp = asChild ? Slot : 'button';
+  return (
+    <Comp
+      className={cn(buttonVariants({ variant, size, className }))}
+      ref={ref}
+      {...props}
+    />
+  );
+});
+Button.displayName = 'Button';
+
+export { Button, buttonVariants };
+
+import { cn } from '@/lib/utils';
+import * as ToastPrimitives from '@radix-ui/react-toast';
+import { cva } from 'class-variance-authority';
+import { X } from 'lucide-react';
+import React from 'react';
+
+const ToastProvider = ToastPrimitives.Provider;
+
+const ToastViewport = React.forwardRef(({ className, ...props }, ref) => (
+  <ToastPrimitives.Viewport
+    ref={ref}
+    className={cn(
+      'fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]',
+      className,
+    )}
+    {...props}
+  />
+));
+ToastViewport.displayName = ToastPrimitives.Viewport.displayName;
+
+const toastVariants = cva(
+  'data-[swipe=move]:transition-none group relative pointer-events-auto flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full data-[state=closed]:slide-out-to-right-full',
+  {
+    variants: {
+      variant: {
+        default: 'bg-background border',
+        destructive:
+          'group destructive border-destructive bg-destructive text-destructive-foreground',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+    },
+  },
+);
+
+const Toast = React.forwardRef(({ className, variant, ...props }, ref) => {
+  return (
+    <ToastPrimitives.Root
+      ref={ref}
+      className={cn(toastVariants({ variant }), className)}
+      {...props}
+    />
+  );
+});
+Toast.displayName = ToastPrimitives.Root.displayName;
+
+const ToastAction = React.forwardRef(({ className, ...props }, ref) => (
+  <ToastPrimitives.Action
+    ref={ref}
+    className={cn(
+      'inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-destructive/30 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive',
+      className,
+    )}
+    {...props}
+  />
+));
+ToastAction.displayName = ToastPrimitives.Action.displayName;
+
+const ToastClose = React.forwardRef(({ className, ...props }, ref) => (
+  <ToastPrimitives.Close
+    ref={ref}
+    className={cn(
+      'absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600',
+      className,
+    )}
+    toast-close=""
+    {...props}
+  >
+    <X className="h-4 w-4" />
+  </ToastPrimitives.Close>
+));
+ToastClose.displayName = ToastPrimitives.Close.displayName;
+
+const ToastTitle = React.forwardRef(({ className, ...props }, ref) => (
+  <ToastPrimitives.Title
+    ref={ref}
+    className={cn('text-sm font-semibold', className)}
+    {...props}
+  />
+));
+ToastTitle.displayName = ToastPrimitives.Title.displayName;
+
+const ToastDescription = React.forwardRef(({ className, ...props }, ref) => (
+  <ToastPrimitives.Description
+    ref={ref}
+    className={cn('text-sm opacity-90', className)}
+    {...props}
+  />
+));
+ToastDescription.displayName = ToastPrimitives.Description.displayName;
+
+export {
+  Toast,
+  ToastAction,
+  ToastClose,
+  ToastDescription,
+  ToastProvider,
+  ToastTitle,
+  ToastViewport,
+};
+
+import {
+  Toast,
+  ToastClose,
+  ToastDescription,
+  ToastProvider,
+  ToastTitle,
+  ToastViewport,
+} from '@/components/ui/toast';
+import { useToast } from '@/components/ui/use-toast';
+import React from 'react';
+
+export function Toaster() {
+  const { toasts } = useToast();
+
+  return (
+    <ToastProvider>
+      {toasts.map(({ id, title, description, action, ...props }) => {
+        return (
+          <Toast key={id} {...props}>
+            <div className="grid gap-1">
+              {title && <ToastTitle>{title}</ToastTitle>}
+              {description && (
+                <ToastDescription>{description}</ToastDescription>
+              )}
+            </div>
+            {action}
+            <ToastClose />
+          </Toast>
+        );
+      })}
+      <ToastViewport />
+    </ToastProvider>
+  );
+}
+
+import { useState, useEffect } from "react"
+
+const TOAST_LIMIT = 1
+
+let count = 0
+function generateId() {
+  count = (count + 1) % Number.MAX_VALUE
+  return count.toString()
+}
+
+const toastStore = {
+  state: {
+    toasts: [],
+  },
+  listeners: [],
+  
+  getState: () => toastStore.state,
+  
+  setState: (nextState) => {
+    if (typeof nextState === 'function') {
+      toastStore.state = nextState(toastStore.state)
+    } else {
+      toastStore.state = { ...toastStore.state, ...nextState }
+    }
+    
+    toastStore.listeners.forEach(listener => listener(toastStore.state))
+  },
+  
+  subscribe: (listener) => {
+    toastStore.listeners.push(listener)
+    return () => {
+      toastStore.listeners = toastStore.listeners.filter(l => l !== listener)
+    }
+  }
+}
+
+export const toast = ({ ...props }) => {
+  const id = generateId()
+
+  const update = (props) =>
+    toastStore.setState((state) => ({
+      ...state,
+      toasts: state.toasts.map((t) =>
+        t.id === id ? { ...t, ...props } : t
+      ),
+    }))
+
+  const dismiss = () => toastStore.setState((state) => ({
+    ...state,
+    toasts: state.toasts.filter((t) => t.id !== id),
+  }))
+
+  toastStore.setState((state) => ({
+    ...state,
+    toasts: [
+      { ...props, id, dismiss },
+      ...state.toasts,
+    ].slice(0, TOAST_LIMIT),
+  }))
+
+  return {
+    id,
+    dismiss,
+    update,
+  }
+}
+
+export function useToast() {
+  const [state, setState] = useState(toastStore.getState())
+  
+  useEffect(() => {
+    const unsubscribe = toastStore.subscribe((state) => {
+      setState(state)
+    })
+    
+    return unsubscribe
+  }, [])
+  
+  useEffect(() => {
+    const timeouts = []
+
+    state.toasts.forEach((toast) => {
+      if (toast.duration === Infinity) {
+        return
+      }
+
+      const timeout = setTimeout(() => {
+        toast.dismiss()
+      }, toast.duration || 5000)
+
+      timeouts.push(timeout)
+    })
+
+    return () => {
+      timeouts.forEach((timeout) => clearTimeout(timeout))
+    }
+  }, [state.toasts])
+
+  return {
+    toast,
+    toasts: state.toasts,
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #22c55e, #3b82f6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #16a34a, #2563eb);
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.6s ease-out;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #22c55e, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Custom button hover effects */
+.btn-primary {
+  background: linear-gradient(135deg, #22c55e, #3b82f6);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #16a34a, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #22c55e;
+  outline-offset: 2px;
+}
+
+/* Custom utilities */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bg-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(34, 197, 94, 0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+}
+
+/* Custom form styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+/* Navigation styles */
+nav a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(135deg, #22c55e, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Section spacing */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Custom shadows */
+.shadow-soft {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-medium {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-large {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from '@/App';
+import '@/index.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from '@/App';
+import '@/index.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ['class'],
+  content: [
+    './pages/**/*.{js,jsx}',
+    './components/**/*.{js,jsx}',
+    './app/**/*.{js,jsx}',
+    './src/**/*.{js,jsx}',
+  ],
+  theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
+    extend: {
+      colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: 0 },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+    },
+  },
+  plugins: [require('tailwindcss-animate')],
+};
+
