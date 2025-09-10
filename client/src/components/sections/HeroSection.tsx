@@ -18,11 +18,11 @@ export default function HeroSection() {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                <span className="gradient-text">Expert Care</span> for Your{" "}
-                <span className="text-foreground">Electric Future</span>
+                <span className="gradient-text">Enlite EV Care</span> : Where EVs get{" "}
+                <span className="text-foreground">Expert Care</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Professional maintenance, diagnostics, and repair services for electric 2-wheelers, 3-wheelers, and buses in Hyderabad. Certified technicians, advanced tools, genuine parts.
+                Expert Care for your Electric Future: Comprehensive EV maintenance and repair for 2-wheelers, 3-wheelers, and buses—delivered by certified experts using advanced diagnostics and genuine parts to keep your EV running at its best.
               </p>
             </div>
             
