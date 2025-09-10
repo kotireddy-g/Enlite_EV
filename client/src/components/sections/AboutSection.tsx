@@ -32,7 +32,7 @@ export default function AboutSection() {
                 <div>
                   <h3 className="text-lg font-semibold">Certified Excellence</h3>
                   <p className="text-muted-foreground">
-                    Our technicians are certified in electric vehicle systems with continuous training on latest technologies.
+                    Our technicians are certified experts in electric vehicle systems. With continuous training on the latest EV technologies, we ensure your vehicle receives the most accurate and reliable service.
                   </p>
                 </div>
               </div>
@@ -44,7 +44,7 @@ export default function AboutSection() {
                 <div>
                   <h3 className="text-lg font-semibold">Advanced Diagnostics</h3>
                   <p className="text-muted-foreground">
-                    State-of-the-art diagnostic equipment for precise fault detection and performance optimization.
+                    We use state-of-the-art diagnostic tools to precisely identify faults and optimize your EV's performance. Our advanced equipment ensures that every repair is done with the highest level of accuracy.
                   </p>
                 </div>
               </div>
@@ -54,9 +54,9 @@ export default function AboutSection() {
                   <Shield className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">Warranty Protection</h3>
+                  <h3 className="text-lg font-semibold">Reliable and Affordable</h3>
                   <p className="text-muted-foreground">
-                    Comprehensive warranty coverage on all repairs with quality guaranteed parts and service.
+                    We provide consistent, cost-effective solutions for all EV segments, ensuring you get the best value for your investment. Our services are designed to keep your EV in top condition without breaking the bank.
                   </p>
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function AboutSection() {
                 <div>
                   <h3 className="text-lg font-semibold">Eco-Friendly Approach</h3>
                   <p className="text-muted-foreground">
-                    Committed to sustainable practices with proper battery recycling and environmental responsibility.
+                    We are committed to sustainable practices, including proper battery recycling and minimizing our environmental impact. Our eco-friendly solutions reflect our dedication to both the planet and the future of electric mobility.
                   </p>
                 </div>
               </div>
