@@ -43,27 +43,31 @@ export default function ServicesSection() {
                 </div>
                 
                 <p className="text-muted-foreground">
-                  Specialized maintenance for electric scooters and motorcycles with advanced battery diagnostics and motor servicing.
+                  Smart care for scooters and motorcycles with advanced diagnostics.
                 </p>
                 
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-500" />
-                    <span>Battery Health Assessment</span>
+                    <span>Battery Health & Range Diagnostics</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-500" />
-                    <span>Motor Performance Tuning</span>
+                    <span>Motor & Controller Tuning</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-500" />
-                    <span>Charging System Repair</span>
+                    <span>Charging Port & Onboard Charger Repair</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-500" />
-                    <span>Brake & Suspension Service</span>
+                    <span>Brake, Suspension & Tyre Service</span>
                   </li>
                 </ul>
+                
+                <p className="text-sm text-green-600 font-medium">
+                  Keep your scooter efficient, safe, and road-ready.
+                </p>
                 
                 <Button
                   onClick={() => scrollToSection("contact")}
@@ -95,27 +99,31 @@ export default function ServicesSection() {
                 </div>
                 
                 <p className="text-muted-foreground">
-                  Complete maintenance solutions for electric auto-rickshaws and delivery vehicles with focus on durability and efficiency.
+                  Reliable maintenance for auto-rickshaws & cargo EVs built for durability.
                 </p>
                 
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-blue-500" />
-                    <span>Heavy-Duty Battery Service</span>
+                    <span>Battery Reconditioning</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-blue-500" />
-                    <span>Commercial Motor Repair</span>
+                    <span>Controller & Motor Overhaul</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-blue-500" />
-                    <span>Load Testing & Calibration</span>
+                    <span>Charging & Wiring Harness Repair</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-blue-500" />
-                    <span>Structural Maintenance</span>
+                    <span>Chassis & Structural Reinforcement</span>
                   </li>
                 </ul>
+                
+                <p className="text-sm text-blue-600 font-medium">
+                  Maximize uptime and extend your 3W's lifespan.
+                </p>
                 
                 <Button
                   onClick={() => scrollToSection("contact")}
@@ -147,27 +155,31 @@ export default function ServicesSection() {
                 </div>
                 
                 <p className="text-muted-foreground">
-                  Enterprise-grade maintenance for electric buses with specialized equipment for fleet management and optimization.
+                  Fleet-grade solutions to keep buses running efficiently.
                 </p>
                 
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-purple-500" />
-                    <span>Fleet Battery Management</span>
+                    <span>Fleet Battery Management Service</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-purple-500" />
-                    <span>High-Voltage System Repair</span>
+                    <span>High-Voltage System & Inverter Repair</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-purple-500" />
-                    <span>HVAC & Climate Control</span>
+                    <span>HVAC & Climate Control Maintenance</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-purple-500" />
-                    <span>Route Optimization Analysis</span>
+                    <span>Route Efficiency & Downtime Optimization</span>
                   </li>
                 </ul>
+                
+                <p className="text-sm text-purple-600 font-medium">
+                  Smarter service for reliable, cost-efficient bus operations.
+                </p>
                 
                 <Button
                   onClick={() => scrollToSection("contact")}
@@ -195,8 +207,8 @@ export default function ServicesSection() {
             <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-full mx-auto flex items-center justify-center">
               <Battery className="w-6 h-6 text-white" />
             </div>
-            <h4 className="font-semibold">Battery Replacement</h4>
-            <p className="text-sm text-muted-foreground">Genuine parts warranty</p>
+            <h4 className="font-semibold">All Electric Part Repair</h4>
+            <p className="text-sm text-muted-foreground">To Extend the Life</p>
           </div>
           
           <div className="bg-gray-50 rounded-xl p-6 text-center space-y-3">
@@ -204,7 +216,7 @@ export default function ServicesSection() {
               <Gauge className="w-6 h-6 text-white" />
             </div>
             <h4 className="font-semibold">Performance Tuning</h4>
-            <p className="text-sm text-muted-foreground">Optimize efficiency</p>
+            <p className="text-sm text-muted-foreground">Boost range & efficiency</p>
           </div>
           
           <div className="bg-gray-50 rounded-xl p-6 text-center space-y-3">
@@ -212,7 +224,7 @@ export default function ServicesSection() {
               <Truck className="w-6 h-6 text-white" />
             </div>
             <h4 className="font-semibold">Pickup & Delivery</h4>
-            <p className="text-sm text-muted-foreground">Convenient service</p>
+            <p className="text-sm text-muted-foreground">Hassle-free doorstep service</p>
           </div>
         </div>
       </div>
