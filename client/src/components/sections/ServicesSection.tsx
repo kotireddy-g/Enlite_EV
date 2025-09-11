@@ -38,8 +38,8 @@ export default function ServicesSection() {
           <div className="service-card bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-4 sm:p-8 border border-green-200">
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Electric scooter service"
+                src="https://images.unsplash.com/photo-1504333638930-c8787321eee0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3"
+                alt="Technician working on electric scooter in professional workshop with diagnostic tools"
                 className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-2wheeler"
               />
@@ -95,8 +95,8 @@ export default function ServicesSection() {
           <div className="service-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4 sm:p-8 border border-blue-200">
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1623046691919-c7c93f5b7b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Electric three-wheeler service"
+                src="https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3"
+                alt="Auto mechanic performing diagnostic service on vehicle in professional garage workshop"
                 className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-3wheeler"
               />
@@ -152,8 +152,8 @@ export default function ServicesSection() {
           <div className="service-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-4 sm:p-8 border border-purple-200">
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Electric bus maintenance service"
+                src="https://images.unsplash.com/photo-1632823471565-1ecdf0ba7e2c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3"
+                alt="Professional technician servicing large vehicle in maintenance depot with specialized equipment"
                 className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-bus"
               />
