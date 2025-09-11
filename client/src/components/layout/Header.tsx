@@ -26,22 +26,32 @@ export default function Header() {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "glass-effect border-b border-border/50" : "bg-transparent"
-    }`}>
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "glass-effect border-b border-border/50" : "bg-transparent"
+      }`}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3" data-testid="link-home">
+          <Link
+            href="/"
+            className="flex items-center space-x-3"
+            data-testid="link-home"
+          >
             <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
               <Zap className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold gradient-text">ENLITE EV CARE</h1>
-              <p className="text-xs text-muted-foreground hidden sm:block">Pure Electric Solutions</p>
+              <h1 className="text-xl font-bold gradient-text">
+                ENLITE EV CARE
+              </h1>
+              <p className="text-xs text-muted-foreground hidden sm:block">
+                Where EVs get Expert Care
+              </p>
             </div>
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button
@@ -77,7 +87,7 @@ export default function Header() {
               <span>+91 9666994443</span>
             </div>
           </div>
-          
+
           {/* CTA Button */}
           <Button
             onClick={() => scrollToSection("contact")}
@@ -86,7 +96,7 @@ export default function Header() {
           >
             Book Service
           </Button>
-          
+
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
@@ -95,7 +105,11 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             data-testid="button-mobile-menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </Button>
         </div>
 

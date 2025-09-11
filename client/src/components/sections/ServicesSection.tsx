@@ -1,5 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Bike, Car, Bus, Check, Wrench, Battery, Gauge, Truck } from "lucide-react";
+import {
+  Bike,
+  Car,
+  Bus,
+  Check,
+  Wrench,
+  Battery,
+  Gauge,
+  Truck,
+} from "lucide-react";
 
 export default function ServicesSection() {
   const scrollToSection = (sectionId: string) => {
@@ -13,39 +22,41 @@ export default function ServicesSection() {
     <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl font-bold">
+        <div className="text-center space-y-4 mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold">
             Our <span className="gradient-text">Specialized Services</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive electric vehicle maintenance across all segments with cutting-edge diagnostic equipment and certified expertise.
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Comprehensive electric vehicle maintenance across all segments with
+            cutting-edge diagnostic equipment and certified expertise.
           </p>
         </div>
 
         {/* Service Categories */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {/* Two Wheeler Service Card */}
-          <div className="service-card bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200">
+          <div className="service-card bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-4 sm:p-8 border border-green-200">
             <div className="space-y-6">
               <img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Electric scooter service"
-                className="w-full h-48 object-cover rounded-lg"
+                className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-2wheeler"
               />
-              
+
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
                     <Bike className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold">2-Wheeler EV Service</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold">2-Wheeler EV Service</h3>
                 </div>
-                
+
                 <p className="text-muted-foreground">
-                  Smart care for scooters and motorcycles with advanced diagnostics.
+                  Smart care for scooters and motorcycles with advanced
+                  diagnostics.
                 </p>
-                
+
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-500" />
@@ -64,11 +75,11 @@ export default function ServicesSection() {
                     <span>Brake, Suspension & Tyre Service</span>
                   </li>
                 </ul>
-                
+
                 <p className="text-sm text-green-600 font-medium">
                   Keep your scooter efficient, safe, and road-ready.
                 </p>
-                
+
                 <Button
                   onClick={() => scrollToSection("contact")}
                   className="w-full bg-green-500 text-white hover:bg-green-600"
@@ -81,27 +92,28 @@ export default function ServicesSection() {
           </div>
 
           {/* Three Wheeler Service Card */}
-          <div className="service-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
+          <div className="service-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4 sm:p-8 border border-blue-200">
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="https://media.istockphoto.com/id/1195020299/photo/electric-rickshaw.jpg?s=612x612&w=0&k=20&c=q-JJL4bCnU3_gk13NX-qMrTOcoRrV7Pi4dk_8jI8uDg="
                 alt="Electric three-wheeler service"
-                className="w-full h-48 object-cover rounded-lg"
+                className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-3wheeler"
               />
-              
+
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
                     <Car className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold">3-Wheeler EV Service</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold">3-Wheeler EV Service</h3>
                 </div>
-                
+
                 <p className="text-muted-foreground">
-                  Reliable maintenance for auto-rickshaws & cargo EVs built for durability.
+                  Reliable maintenance for auto-rickshaws & cargo EVs built for
+                  durability.
                 </p>
-                
+
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-blue-500" />
@@ -120,11 +132,11 @@ export default function ServicesSection() {
                     <span>Chassis & Structural Reinforcement</span>
                   </li>
                 </ul>
-                
+
                 <p className="text-sm text-blue-600 font-medium">
                   Maximize uptime and extend your 3W's lifespan.
                 </p>
-                
+
                 <Button
                   onClick={() => scrollToSection("contact")}
                   className="w-full bg-blue-500 text-white hover:bg-blue-600"
@@ -137,27 +149,27 @@ export default function ServicesSection() {
           </div>
 
           {/* Bus Service Card */}
-          <div className="service-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200">
+          <div className="service-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-4 sm:p-8 border border-purple-200">
             <div className="space-y-6">
               <img
                 src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
                 alt="Electric bus maintenance service"
-                className="w-full h-48 object-cover rounded-lg"
+                className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-bus"
               />
-              
+
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
                     <Bus className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold">Electric Bus Service</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold">Electric Bus Service</h3>
                 </div>
-                
+
                 <p className="text-muted-foreground">
                   Fleet-grade solutions to keep buses running efficiently.
                 </p>
-                
+
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-purple-500" />
@@ -176,11 +188,11 @@ export default function ServicesSection() {
                     <span>Route Efficiency & Downtime Optimization</span>
                   </li>
                 </ul>
-                
+
                 <p className="text-sm text-purple-600 font-medium">
                   Smarter service for reliable, cost-efficient bus operations.
                 </p>
-                
+
                 <Button
                   onClick={() => scrollToSection("contact")}
                   className="w-full bg-purple-500 text-white hover:bg-purple-600"
@@ -194,37 +206,43 @@ export default function ServicesSection() {
         </div>
 
         {/* Additional Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-gray-50 rounded-xl p-6 text-center space-y-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="bg-gray-50 rounded-xl p-4 sm:p-6 text-center space-y-3">
             <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-full mx-auto flex items-center justify-center">
               <Wrench className="w-6 h-6 text-white" />
             </div>
             <h4 className="font-semibold">Emergency Repair</h4>
-            <p className="text-sm text-muted-foreground">24/7 roadside assistance</p>
+            <p className="text-sm text-muted-foreground">
+              24/7 roadside assistance
+            </p>
           </div>
-          
-          <div className="bg-gray-50 rounded-xl p-6 text-center space-y-3">
+
+          <div className="bg-gray-50 rounded-xl p-4 sm:p-6 text-center space-y-3">
             <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-full mx-auto flex items-center justify-center">
               <Battery className="w-6 h-6 text-white" />
             </div>
             <h4 className="font-semibold">All Electric Part Repair</h4>
             <p className="text-sm text-muted-foreground">To Extend the Life</p>
           </div>
-          
-          <div className="bg-gray-50 rounded-xl p-6 text-center space-y-3">
+
+          <div className="bg-gray-50 rounded-xl p-4 sm:p-6 text-center space-y-3">
             <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-full mx-auto flex items-center justify-center">
               <Gauge className="w-6 h-6 text-white" />
             </div>
             <h4 className="font-semibold">Performance Tuning</h4>
-            <p className="text-sm text-muted-foreground">Boost range & efficiency</p>
+            <p className="text-sm text-muted-foreground">
+              Boost range & efficiency
+            </p>
           </div>
-          
-          <div className="bg-gray-50 rounded-xl p-6 text-center space-y-3">
+
+          <div className="bg-gray-50 rounded-xl p-4 sm:p-6 text-center space-y-3">
             <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-full mx-auto flex items-center justify-center">
               <Truck className="w-6 h-6 text-white" />
             </div>
             <h4 className="font-semibold">Pickup & Delivery</h4>
-            <p className="text-sm text-muted-foreground">Hassle-free doorstep service</p>
+            <p className="text-sm text-muted-foreground">
+              Hassle-free doorstep service
+            </p>
           </div>
         </div>
       </div>

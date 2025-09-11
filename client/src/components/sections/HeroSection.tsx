@@ -10,22 +10,25 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="pt-16 min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 relative overflow-hidden">
+    <section
+      id="home"
+      className="pt-16 min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
                 <span className="gradient-text">Enlite EV Care</span> : Where EVs get{" "}
                 <span className="text-foreground">Expert Care</span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                 Expert Care for your Electric Future: Comprehensive EV maintenance and repair for 2-wheelers, 3-wheelers, and buses—delivered by certified experts using advanced diagnostics and genuine parts to keep your EV running at its best.
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 onClick={() => scrollToSection("contact")}
@@ -43,50 +46,71 @@ export default function HeroSection() {
                 Get Free Quote
               </Button>
             </div>
-            
+
             {/* Trust Indicators */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 pt-8">
               <div className="text-center">
-                <div className="text-2xl font-bold gradient-text" data-testid="text-stats-customers">500+</div>
-                <div className="text-sm text-muted-foreground">Satisfied Customers</div>
+                <div
+                  className="text-2xl font-bold gradient-text"
+                  data-testid="text-stats-customers"
+                >
+                  500+
+                </div>
+                <div className="text-xs sm:text-sm text-muted-foreground">
+                  Satisfied Customers
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold gradient-text" data-testid="text-stats-experience">5+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div
+                  className="text-2xl font-bold gradient-text"
+                  data-testid="text-stats-experience"
+                >
+                  5+
+                </div>
+                <div className="text-xs sm:text-sm text-muted-foreground">
+                  Years Experience
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold gradient-text" data-testid="text-stats-certified">100%</div>
-                <div className="text-sm text-muted-foreground">Certified Technicians</div>
+                <div
+                  className="text-2xl font-bold gradient-text"
+                  data-testid="text-stats-certified"
+                >
+                  100%
+                </div>
+                <div className="text-xs sm:text-sm text-muted-foreground">
+                  Certified Technicians
+                </div>
               </div>
             </div>
           </div>
-          
+
           {/* Hero Visual */}
           <div className="relative">
             <img
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
               alt="Professional electric vehicle service center"
-              className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
+              className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl"
               data-testid="img-hero-main"
             />
-            
+
             {/* Floating Service Cards */}
-            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-              <div className="flex items-center space-x-2">
-                <Clock className="w-5 h-5 text-green-500" />
-                <div className="text-sm">
+            <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-white/90 backdrop-blur-sm rounded-lg p-2 sm:p-4 shadow-lg">
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" />
+                <div className="text-xs sm:text-sm">
                   <div className="font-semibold">Quick Service</div>
-                  <div className="text-muted-foreground">Same Day Pickup</div>
+                  <div className="text-muted-foreground hidden sm:block">Same Day Pickup</div>
                 </div>
               </div>
             </div>
-            
-            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-              <div className="flex items-center space-x-2">
-                <ShieldCheck className="w-5 h-5 text-blue-500" />
-                <div className="text-sm">
+
+            <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-white/90 backdrop-blur-sm rounded-lg p-2 sm:p-4 shadow-lg">
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />
+                <div className="text-xs sm:text-sm">
                   <div className="font-semibold">Warranty Protected</div>
-                  <div className="text-muted-foreground">6 Month Guarantee</div>
+                  <div className="text-muted-foreground hidden sm:block">6 Month Guarantee</div>
                 </div>
               </div>
             </div>
