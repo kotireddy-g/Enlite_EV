@@ -38,7 +38,7 @@ export default function ServicesSection() {
           <div className="service-card bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-4 sm:p-8 border border-green-200">
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Electric scooter service"
                 className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-2wheeler"
@@ -95,7 +95,7 @@ export default function ServicesSection() {
           <div className="service-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4 sm:p-8 border border-blue-200">
             <div className="space-y-6">
               <img
-                src="https://media.istockphoto.com/id/1195020299/photo/electric-rickshaw.jpg?s=612x612&w=0&k=20&c=q-JJL4bCnU3_gk13NX-qMrTOcoRrV7Pi4dk_8jI8uDg="
+                src="https://images.unsplash.com/photo-1623046691919-c7c93f5b7b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Electric three-wheeler service"
                 className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-3wheeler"
@@ -152,7 +152,7 @@ export default function ServicesSection() {
           <div className="service-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-4 sm:p-8 border border-purple-200">
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Electric bus maintenance service"
                 className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-bus"
