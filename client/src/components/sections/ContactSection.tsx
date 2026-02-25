@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { MapPin, Phone, Mail, Clock, Map } from "lucide-react";
-import { apiRequest } from "@/lib/queryClient";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+
 
 interface ContactFormData {
   name: string;
@@ -20,7 +20,6 @@ interface ContactFormData {
 
 export default function ContactSection() {
   const { toast } = useToast();
-  const queryClient = useQueryClient();
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     phone: "",
@@ -32,11 +31,27 @@ export default function ContactSection() {
 
   const submitContactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      return await apiRequest("POST", "/api/contact", data);
+      const response = await fetch("https://enliteev.com/api/submit_booking.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          full_name: data.name,
+          phone_number: data.phone,
+          email: data.email,
+          vehicle_type: data.vehicleType,
+          service_type: data.serviceType,
+          message: data.message,
+        }),
+      });
+      const result = await response.json();
+      if (!result.status) {
+        throw new Error(result.message || "Booking failed. Please try again.");
+      }
+      return result;
     },
     onSuccess: () => {
       toast({
-        title: "Service booking request submitted!",
+        title: "Service booking submitted successfully! ✅",
         description: "We'll contact you shortly to confirm your appointment.",
       });
       setFormData({
@@ -47,7 +62,6 @@ export default function ContactSection() {
         serviceType: "",
         message: "",
       });
-      queryClient.invalidateQueries({ queryKey: ["/api/contact"] });
     },
     onError: (error: Error) => {
       toast({
@@ -60,7 +74,7 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.phone || !formData.vehicleType) {
       toast({
         title: "Please fill in required fields",
@@ -125,7 +139,7 @@ export default function ContactSection() {
                   />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
@@ -137,7 +151,7 @@ export default function ContactSection() {
                   data-testid="input-email"
                 />
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label>Vehicle Type *</Label>
@@ -174,7 +188,7 @@ export default function ContactSection() {
                   </Select>
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
                 <Textarea
@@ -187,7 +201,7 @@ export default function ContactSection() {
                   data-testid="textarea-message"
                 />
               </div>
-              
+
               <Button
                 type="submit"
                 disabled={submitContactMutation.isPending}
@@ -198,12 +212,12 @@ export default function ContactSection() {
               </Button>
             </form>
           </div>
-          
+
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold">Visit Our Service Center</h3>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -218,7 +232,7 @@ export default function ContactSection() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-blue-600" />
@@ -231,7 +245,7 @@ export default function ContactSection() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-purple-600" />
@@ -241,7 +255,7 @@ export default function ContactSection() {
                     <p className="text-muted-foreground">info@enliteev.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6 h-6 text-orange-600" />
@@ -256,16 +270,21 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            
-            {/* Location Map Placeholder */}
-            <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center cursor-pointer hover:bg-gray-300 transition-colors">
-              <div className="text-center space-y-2">
-                <Map className="w-12 h-12 text-gray-500 mx-auto" />
-                <p className="text-gray-600 font-medium">Interactive Map</p>
-                <p className="text-sm text-gray-500">Click to view location</p>
-              </div>
+
+            {/* Interactive Google Map */}
+            <div className="rounded-2xl overflow-hidden h-64 shadow-md border border-gray-200">
+              <iframe
+                title="Enlite EV Care Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.6!2d78.3910!3d17.4947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93b5c5555555%3A0x0!2sLIG+549%2C+Road+No-3%2C+KPHB+Colony%2C+Hyderabad%2C+Telangana+500072!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=LIG+549,+Road+No-3,+KPHB+Colony,+Hyderabad,+Telangana+500072"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
-            
+
             <div className="bg-gradient-to-br from-green-500 to-blue-500 text-white rounded-2xl p-6">
               <h4 className="text-xl font-bold mb-4">Emergency Service Available</h4>
               <p className="mb-4">
