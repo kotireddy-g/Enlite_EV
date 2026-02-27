@@ -38,8 +38,8 @@ export default function ServicesSection() {
           <div className="service-card bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-4 sm:p-8 border border-green-200">
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1504333638930-c8787321eee0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3"
-                alt="Technician working on electric scooter in professional workshop with diagnostic tools"
+                src="https://enliteev.com/Electric%20Bike%20Insurance%20Policy.png"
+                alt="Electric scooter at charging station with city skyline at night"
                 className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-2wheeler"
               />
@@ -95,8 +95,8 @@ export default function ServicesSection() {
           <div className="service-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4 sm:p-8 border border-blue-200">
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3"
-                alt="Auto mechanic performing diagnostic service on vehicle in professional garage workshop"
+                src="https://enliteev.com/montra-super-auto-16198%20(1).jpg"
+                alt="Modern enclosed electric three wheeler EV pod vehicle"
                 className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-3wheeler"
               />
@@ -152,8 +152,8 @@ export default function ServicesSection() {
           <div className="service-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-4 sm:p-8 border border-purple-200">
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1632823471565-1ecdf0ba7e2c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3"
-                alt="Professional technician servicing large vehicle in maintenance depot with specialized equipment"
+                src="https://enliteev.com/hyundai-ecv-products-elec-city-hero-pc.jpg"
+                alt="Futuristic modern electric bus on road"
                 className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-bus"
               />
