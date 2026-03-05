@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Zap, Menu, X, Phone, LogIn, LayoutDashboard, LogOut } from "lucide-react";
+import { Menu, X, Phone, LogIn, LayoutDashboard, LogOut } from "lucide-react";
 
 export default function Header() {
   const [location] = useLocation();
@@ -53,17 +53,12 @@ export default function Header() {
             className="flex items-center space-x-3"
             data-testid="link-home"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold gradient-text">
-                ENLITE EV CARE
-              </h1>
-              <p className="text-xs text-muted-foreground hidden sm:block">
-                Where EVs get Expert Care
-              </p>
-            </div>
+            <img
+              src="https://enliteev.com/enliteev_logo.png"
+              alt="Enlite EV Care Logo"
+              className="h-10 w-auto object-contain"
+              data-testid="img-logo"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -122,8 +122,8 @@ export default function AboutSection() {
           {/* About Visual */}
           <div className="space-y-6">
             <img
-              src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
-              alt="Professional mechanics working on diagnostics"
+              src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80"
+              alt="EV battery diagnostics - certified technician using multimeter on electric vehicle battery"
               className="w-full h-80 object-cover rounded-2xl shadow-lg"
               data-testid="img-about-main"
             />

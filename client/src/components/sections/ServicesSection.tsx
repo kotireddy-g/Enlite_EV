@@ -95,8 +95,8 @@ export default function ServicesSection() {
           <div className="service-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4 sm:p-8 border border-blue-200">
             <div className="space-y-6">
               <img
-                src="https://enliteev.com/montra-super-auto-16198%20(1).jpg"
-                alt="Modern enclosed electric three wheeler EV pod vehicle"
+                src="/ev_three_wheeler_ai.png"
+                alt="AI-generated modern electric three-wheeler auto-rickshaw EV"
                 className="w-full h-40 sm:h-48 object-cover rounded-lg"
                 data-testid="img-service-3wheeler"
               />

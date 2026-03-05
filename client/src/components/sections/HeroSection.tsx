@@ -65,7 +65,7 @@ export default function HeroSection() {
                   className="text-2xl font-bold gradient-text"
                   data-testid="text-stats-experience"
                 >
-                  5+
+                  15+
                 </div>
                 <div className="text-xs sm:text-sm text-muted-foreground">
                   Years Experience
@@ -76,7 +76,7 @@ export default function HeroSection() {
                   className="text-2xl font-bold gradient-text"
                   data-testid="text-stats-certified"
                 >
-                  100%
+                  100+
                 </div>
                 <div className="text-xs sm:text-sm text-muted-foreground">
                   Certified Technicians
@@ -87,11 +87,14 @@ export default function HeroSection() {
 
           {/* Hero Visual */}
           <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Professional electric vehicle service center"
+            <video
+              src="https://enliteev.com/EV_Mechanic_Video_Generation.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
               className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl"
-              data-testid="img-hero-main"
+              data-testid="video-hero-main"
             />
 
             {/* Floating Service Cards */}
